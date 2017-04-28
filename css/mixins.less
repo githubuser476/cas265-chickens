@@ -1,0 +1,99 @@
+// out: null
+
+/*
+File Name: mixins.less
+Date: 03/10/17
+Programmer: Rebecca Kennedy
+*/
+
+.headingStyle(@paramColor: #000000; @paramSize: 20px) {
+    color: @paramColor; 
+    font-size: @paramSize; 
+    font-weight: bold; 
+    line-height: @paramSize; 
+    margin-top: @paramSize / 3.5;
+    margin-bottom: @paramSize / 3.5;
+    text-transform: uppercase;
+}
+
+.button(@paramRounded: 10px; @paramColor: #AAA) {
+    -moz-border-radius: @paramRounded;
+    -webkit-border-radius: @paramRounded;
+    border-radius: @paramRounded;
+    background-color: @paramColor;
+    
+    &:active {
+        -webkit-box-shadow: 1px 0px 2px black;
+        box-shadow: 1px 0px  2px black;
+    }
+}
+
+.contentContainer(@paramRadius: 10px) {
+    -moz-border-radius: @paramRadius;
+    -webkit-border-radius: @paramRadius;
+    border-radius: @paramRadius;
+}
+
+.shadow(@paramX: 5px; @paramY: 5px; @paramColor: #AAA; @paramBlur: 3px) {
+    -webkit-box-shadow: @paramX @paramY @paramBlur @paramColor;
+    box-shadow: @paramX @paramY @paramBlur @paramColor;
+}
+
+.gradient(@paramDirection: bottom; @paramColor1: #AAA; @paramColor2: #CCC) {
+    background: @paramColor1;
+    background: -o-linear-gradient(@paramDirection, @paramColor1, @paramColor2);
+    background: -moz-linear-gradient(@paramDirection, @paramColor1, @paramColor2);
+    background: linear-gradient(@paramDirection, @paramColor1, @paramColor2);
+}
+
+.expand() {
+    transform: scale(1.25);
+}
+
+.transparent() {
+    opacity: 0.5;
+}
+
+.emphasize() {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.uppercase() {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.flipImg() {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.firstParagraph() {
+    text-align: center;
+    margin: 1em;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.code() {
+    border: 1px solid black;
+    margin: 1em;
+    padding: .9em;
+}
+
+.roomier() {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.firstLetter() {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: darkgreen;
+    padding-left: 1.5em;
+}

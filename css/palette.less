@@ -1,0 +1,39 @@
+// out: null
+
+/*
+File Name: palette.less
+Date: 03/10/17
+Programmer: Rebecca Kennedy
+*/
+
+/* Color palet was chosen from a predetermined color palette
+at www.colourlovers.com. The url to the color palette is
+http://www.colourlovers.com/palette/3187787/Red_Bridge. */
+
+@color1: rgb(124,10,2); //Barn Red
+@color2: rgb(207,24,11); //Ligter Red
+@color3: rgb(33,102,48); //Lighter Green
+@color4: rgb(17,64,28); //Darker Green
+@color5: rgb(98,134,182); //Blue
+@color6: rgb(0,0,0); //Black
+@color7: rgb(255,255,255); //White
+
+@darkColor1: darken(@color1, 10%);
+@darkColor2: darken(@color2, 20%);
+@darkColor3: darken(@color3, 20%);
+@darkColor4: darken(@color4, 10%);
+@darkColor5: darken(@color5, 20%);
+@darkColor5-1: darken(@color5, 45%);
+
+@lightColor1: lighten(@color1, 20%);
+@lightColor2: lighten(@color2, 20%);
+@lightColor3: lighten(@color3, 50%);
+@lightColor3-1: lighten(@color3, 25%);
+@lightColor4: lighten(@color4, 5%);
+@lightColor5: lighten(@color5, 20%);
+
+@greyColor1: desaturate(@color1, 100%);
+@greyColor2: desaturate(@color2, 100%);
+@greyColor3: desaturate(@color3, 100%);
+@greyColor4: desaturate(@color4, 100%);
+@greyColor5: desaturate(@color5, 100%);

@@ -1,0 +1,373 @@
+/*
+File Name: style.less
+Date: 03/20/17
+Programmer: Rebecca Kennedy
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+/* MOBILE STYLESHEET */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    background-color: @darkColor1;
+}
+
+header {
+    .headingStyle(white; 2em);
+    text-shadow: .08em .07em @color6;
+    word-spacing: 100em;
+    line-height: 1.15em;
+    padding-left: 4em;
+    padding-top: 3.55em;
+    padding-right: .1em;
+    text-align: center;
+    background: url(../images/heading.png) .75em .45em no-repeat;
+    margin: 0;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.35em;
+    color: @darkColor5;
+    text-align: center;
+    border-bottom: .1em solid @darkColor5;
+    margin-bottom: .5em;
+}
+
+nav ul{
+    max-width: 50em;
+    margin: .7em;
+    margin-top: 0;
+    li {
+        a {
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: 'Raleway', sans-serif;
+            border: .2em solid @color5;
+            border-bottom: none;
+            display: block;
+            padding: .35em;
+            text-align: center;
+            .gradient(top; @lightColor3; @lightColor3-1); 
+            &:link {
+                color: @color6;
+            }
+            &:visited {
+                color: @color6;
+            }
+            &:hover {
+                text-decoration: none;
+                color: @color7;
+                .gradient(top; @color4; @darkColor4);
+            }
+        }
+        &:last-of-type a {
+            border-bottom: .2em solid @color5;
+            border-bottom-left-radius: .8em;
+            border-bottom-right-radius: .8em;
+        }
+        &:first-of-type a {
+            border-top-left-radius: .8em;
+            border-top-right-radius: .8em;
+        }
+    }
+}
+
+main {
+    display: block; //displaying as block is needed for IE.
+    margin: .7em;
+    padding: .5em;
+    border: .1em solid @color2;
+    background-color: @color7;
+    .contentContainer(1em);
+    img {
+        padding: .3em .2em .3em .2em;
+        text-align: center;
+        &.float-right {
+            float: right;
+        }
+        &.float-left {
+            float: left;
+        }
+    }
+    .clear-main {
+        clear: both;
+    }
+    dl {
+        .faq {
+            display: block;
+            dt {
+                font-weight: bold;
+                font-size: 1.09em;
+                padding-top: .8em;
+                padding-bottom: .05em;
+                &:first-of-type {
+                    padding-top: 0;
+                }
+            }
+            dd p {
+                padding-top: .5em;
+            }
+        }
+    }
+    &.gallery {
+        text-align: center;
+        figure {
+            display: inline;
+            img {
+                margin: .1em;
+                padding: 0;
+                border: .5em solid @darkColor2;
+            }
+        }
+    }
+}
+
+
+aside {
+    margin: .7em;
+    padding: .5em;
+    border: .1em solid @color2;
+    background-color: @color7;
+    .contentContainer(1em);
+    dl {
+        display: block;
+        .term {
+            margin: .3em;
+            dt, dd {
+                display: inline;
+            }
+            dt {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+footer {
+    margin: .7em;
+    margin-bottom: 1em;
+    padding: .5em;
+    border: .1em solid @color2;
+    background-color: @color7;
+    .contentContainer(1em);
+    ul{
+        margin: .5em;
+        text-align: center;
+        a {
+            font-weight: bold;
+            font-size: 1.25em;
+            &:link {
+                color: @color3;
+            }
+            &:visited {
+                color: @color3;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    &:link {
+        color: @darkColor5;
+    }
+    &:visited {
+        color: @darkColor5-1;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.area {
+    padding-left: .5em;
+    padding-right: .9em;
+}
+
+/* Adjust for varying mobile sizes. */
+@media only screen and (min-width: 331px) {
+    footer {
+        margin: .7em;
+        margin-bottom: 1em;
+        padding: .5em;
+        border: .1em solid @color2;
+        background-color: @color7;
+        .contentContainer(1em);
+        ul{
+            margin: .5em;
+            text-align: center;
+            a {
+                font-weight: bold;
+                font-size: 1.25em;
+                &:link {
+                    color: @color3;
+                }
+                &:visited {
+                    color: @color3;
+                }
+            }
+        }
+    }
+}
+
+/*
+
+TABLET IN PORTRAIT STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+    body {
+        font-size: 17px;
+        line-height: 1.65em;
+    }
+    
+    header {
+        color: yellow;
+        word-spacing: normal;
+        padding-top: 4.5em;
+        background-position: 25% .45em;
+        border: .25em solid @color7;
+        margin-left: .7em;
+        margin-right: .7em;
+        margin-top: .3em;
+        .website_name {
+            margin-top: -.7em;
+            margin-bottom: .8em;
+        }
+    }
+    
+    nav ul li {
+        float: left;
+        padding-right: 2%;
+        a {
+            border-bottom: .2em solid @color5;
+            padding: .3em 1em .3em 1em;
+        }
+        &:first-of-type {
+            padding-left: 2%;
+            a {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+        &:last-of-type a {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    
+    main {
+        padding-right: .7em;
+        padding-left: .7em;
+        dl .faq {
+            display: block;
+            padding: .7em;
+        }
+    }
+    
+    aside dl .term {
+        margin: .3em;
+    }
+    
+    footer {
+        display: block;
+        text-align: center;
+        ul{
+            width: 20em;
+            margin-left: auto;
+            margin-right: auto;
+            li {
+                float: left;
+                margin-left: 1.5em;
+                margin-right: 1.5em;
+            }
+        }
+        p {
+            clear: left;
+        }
+    }
+}
+
+/* Adjust for grid effects.*/
+@media only screen and (min-width: 769px) {
+    .area {
+        padding-left: .7em;
+        padding-right: .7em;
+    }
+    
+    main {
+        padding-right: 1em;
+        padding-left: 1em;
+        img {
+            padding: .3em .3em .3em .3em;
+        }
+    }
+}
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 18.5px;
+        line-height: 1.75em;
+    }
+    
+    header {
+        font-size: 2.35em;
+        border: .23em solid @color7;
+        .website_name {
+            margin-top: -2em;
+            margin-bottom: 0;
+        }
+    }
+    
+    nav ul {
+        max-width: 100em;
+        li a {
+            padding: .3em 2.5em .3em 2.5em;
+        }
+    }
+    
+    #wrapper {
+        margin: 1.3em 3em 1.3em 3em;
+    }
+}
+
+/* Adjust for varying desktop sizes. I implemented sticky for this size
+desktop because if it were implemented in a smaller desktop than this, part
+of the sidebar would be out of view from the user until they scrolled to the
+very bottom of the page, which would be a nuisance. Note that I am assuming
+the smallest screen size height the desktop could have would be 720px. If the
+user had a larger screen and just resized their window to be lower width and
+great height, the  sidebar could have worked but won't because of the following
+media query.*/
+@media only screen and (min-width: 1280px) {
+    aside {
+        position: -webkit-sticky;
+        position: sticky;
+        top: .2em;
+    }
+}
+
+/* Adjust for varying desktop sizes. */
+@media only screen and (min-width: 1500px) {
+    #wrapper {
+        margin: 1.6em 6em 1.6em 6em;
+    }
+}
